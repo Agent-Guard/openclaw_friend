@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.9",
-    "lastTouchedAt": "2026-02-11T18:40:09.565Z"
+    "lastTouchedAt": "2026-02-11T19:56:55.263Z"
   },
   "wizard": {
     "lastRunAt": "2026-02-11T17:35:51.709Z",
@@ -20,7 +20,7 @@
   "models": {
     "providers": {
       "anthropic": {
-        "baseUrl": "http://localhost:8080",
+        "baseUrl": "https://api.anthropic.com",
         "api": "anthropic-messages",
         "models": [
           {
@@ -117,6 +117,18 @@
       }
     }
   },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "open",
+      "botToken": "8496253354:AAFEUjPQ88_pkKUz1S9QLsiXjyR1gccGlCM",
+      "allowFrom": [
+        "*"
+      ],
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
   "gateway": {
     "port": 18789,
     "mode": "local",
@@ -145,12 +157,11 @@
       "nodeManager": "npm"
     }
   },
-  "channels": {
-    "telegram": {
-      "enabled": true,
-      "botToken": "8496253354:AAFEUjPQ88_pkKUz1S9QLsiXjyR1gccGlCM",
-      "dmPolicy": "open",
-      "allowFrom": ["*"]
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
     }
   }
 }
